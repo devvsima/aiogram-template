@@ -19,5 +19,5 @@ DB_USER = env.str("DB_USER", default=None)
 DB_PASS = env.str("DB_PASS", default=None)
 
 I18N_DOMAIN = 'bot'
-LOCALES_DIR = f'{DIR}\data\locales'
+LOCALES_DIR = f'{DIR}/data/locales'
 
