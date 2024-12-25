@@ -1,9 +1,10 @@
 from aiogram import types
-from aiogram.dispatcher.filters import CommandStart
+from aiogram.filters import CommandStart
 
-from loader import dp, bot, _
+from loader import _
+from loader import router as dp
 
-@dp.message_handler(CommandStart())
+@dp.message(CommandStart())
 async def _start_command(message: types.Message):
     text = _("👋, <a href='tg://user?id={}'>{}</a>")
     await message.answer(text.format(message.from_user.id, message.from_user.full_name))

@@ -1,9 +1,10 @@
 # 🚀 Давай начнем
 
 ## 🛠️ Стек технологий
+- `aiogram 3`
+- `i18n`
 - `peewee`
-- `aiogram 2`
-- `PostgreSQL`
+- `PostgreSQL \ Sqlite`
 
 ---
 

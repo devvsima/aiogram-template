@@ -1,12 +1,12 @@
-from aiogram import types
-from aiogram.dispatcher.filters import CommandSettings, Command
+from aiogram.types import Message
+from aiogram.filters import Command
 
-from loader import dp, bot, _
+from loader import _
+from loader import router as dp
 
 
-@dp.message_handler(Command("Settings ⚙️"))
-@dp.message_handler(CommandSettings())
-async def _settings_command(message: types.Message):
+@dp.message(Command("Settings ⚙️"))
+async def _settings_command(message: Message):
     await message.answer(
         text=_("You settings ⚙️"),
     )

@@ -2,7 +2,7 @@
 # 🚀 Getting Started
 
 ## 🛠️ Technologies Stack
-- `aiogram 2`
+- `aiogram 3`
 - `i18n`
 - `peewee`
 - `PostgreSQL \ Sqlite`

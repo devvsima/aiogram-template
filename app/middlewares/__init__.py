@@ -1,6 +1,5 @@
 from aiogram import Dispatcher
 from .user import UsersMiddleware
-from .throttling import ThrottlingMiddleware
 from app.middlewares.i18n import i18n
 
 def setup_middlewares(dp: Dispatcher) -> None:

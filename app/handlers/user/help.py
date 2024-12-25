@@ -1,12 +1,13 @@
-from aiogram import types
-from aiogram.dispatcher.filters import CommandHelp, Command
+from aiogram.types import Message
+from aiogram.filters import Command
 
-from loader import dp, bot, _
+from loader import _
+from loader import router as dp
 
 
-@dp.message_handler(Command("Help 🆘"))
-@dp.message_handler(CommandHelp())
-async def _help_command(message: types.Message):
+@dp.message(Command("Help 🆘"))
+@dp.message(Command("help"))
+async def _help_command(message: Message):
     await message.answer(
         text=_("Help 🆘"),
     )
