@@ -7,7 +7,7 @@ from loader import router as dp
 
 @dp.message(Command("Help 🆘"))
 @dp.message(Command("help"))
-async def _help_command(message: Message):
+async def _help_command(message: Message) -> None:
     await message.answer(
         text=_("Help 🆘"),
     )

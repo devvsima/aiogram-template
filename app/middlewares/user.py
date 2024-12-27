@@ -15,12 +15,11 @@ class UsersMiddleware(BaseMiddleware):
             from_user = event.inline_query.from_user
         if from_user:
             user = get_or_create_user(
-                from_user.id,
-                name=from_user.full_name,
+                user_id=from_user.id,
                 username=from_user.username,
                 language=from_user.language_code,
             )
-            if user.status != "banned":
+            if not user.is_banned:
                 data["user"] = user
                 return await handler(event, data)
 

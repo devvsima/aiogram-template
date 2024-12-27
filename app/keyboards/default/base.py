@@ -5,6 +5,8 @@ from aiogram.types import (
 )
 from loader import _
 
+del_kb = ReplyKeyboardRemove()
+
 
 def base_kb():
     kb = ReplyKeyboardMarkup(
